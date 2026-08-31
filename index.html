@@ -35,7 +35,7 @@
     <span class="brand-word">Lambda</span>
   </a>
   <nav class="nav-links">
-    <a href="#features">Features</a>
+    <a href="#features">Desync</a>
     <a href="#compile">Compile</a>
     <a href="https://github.com/ryknuq/Lambda" target="_blank" rel="noopener">GitHub</a>
     <a class="nav-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">Discord</a>
@@ -84,88 +84,57 @@
   </aside>
 </section>
 <section class="sect" id="features">
+  <div class="dsy-wrap">
+    <div class="dsy-copy">
+      <h2>They shoot where you were standing.</h2>
+      <p>Desync splits the yaw the server writes down from the one your bullets actually leave.
+        Drag the dial. The solid line is where you are firing from, the dashed one is what every
+        enemy's aimbot resolves against, and the gap between the two is the whole game — it is
+        also what doubletap, backtrack and the resolver are all built on top of.</p>
+      <div class="dsy-modes" role="group" aria-label="Anti-aim mode">
+        <button class="dsy-mode is-on" type="button" data-mode="desync">desync</button>
+        <button class="dsy-mode" type="button" data-mode="jitter">jitter</button>
+        <button class="dsy-mode" type="button" data-mode="spin">spin</button>
+      </div>
+      <dl class="dsy-read">
+        <div><dt>real</dt><dd data-role="d-real">0&deg;</dd></div>
+        <div><dt>fake</dt><dd data-role="d-fake">-58&deg;</dd></div>
+        <div><dt>gap</dt><dd data-role="d-gap">58&deg;</dd></div>
+        <div><dt>side</dt><dd data-role="d-side">left</dd></div>
+      </dl>
+    </div>
+    <div class="dsy-dial" data-role="dial" tabindex="0" role="slider" aria-label="Your yaw"
+      aria-valuemin="-180" aria-valuemax="180" aria-valuenow="0">
+      <svg viewBox="0 0 300 300" aria-hidden="true">
+        <circle class="dsy-ring" cx="150" cy="150" r="112"/>
+        <circle class="dsy-ring dsy-ring-in" cx="150" cy="150" r="74"/>
+        <g class="dsy-tick">
+          <line x1="150" y1="28" x2="150" y2="41"/>
+          <line x1="272" y1="150" x2="259" y2="150"/>
+          <line x1="150" y1="272" x2="150" y2="259"/>
+          <line x1="28" y1="150" x2="41" y2="150"/>
+        </g>
+        <path class="dsy-wedge" data-role="d-wedge" d=""/>
+        <line class="dsy-ghost" data-role="d-ghost2" x1="150" y1="150" x2="150" y2="54"/>
+        <line class="dsy-ghost" data-role="d-ghost" x1="150" y1="150" x2="150" y2="54"/>
+        <line class="dsy-live" data-role="d-live" x1="150" y1="150" x2="150" y2="54"/>
+        <circle class="dsy-dot" cx="150" cy="150" r="4.5"/>
+      </svg>
+      <span class="dsy-hint">drag it, or use the arrow keys</span>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="log">
   <div class="sect-head">
-    <h2>Inside the build</h2>
+    <h2>Pushed lately</h2>
   </div>
-  <div class="grid">
-    <article class="unit">
-      <h3>Tickbase</h3>
-      <ul>
-        <li>Double tap up to a 16 tick shift</li>
-        <li>Hide shots that still land</li>
-        <li>Shift budget checked before every fire</li>
-        <li>Shorter shift while peeking a corner</li>
-        <li>Teleport corrected on release, no rubber band</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Anti-aim</h3>
-      <ul>
-        <li>Real desync, both sides, manual left and right</li>
-        <li>Jitter, spin and static yaw offsets</li>
-        <li>Freestanding read off world geometry</li>
-        <li>Fake duck, slide walk, fast stop</li>
-        <li>Pitch at target and by distance</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Resolver</h3>
-      <ul>
-        <li>Yaw solved from animation layers, not guessed</li>
-        <li>Shot history kept per enemy</li>
-        <li>Corrects itself again after every miss</li>
-        <li>Fake and real angle drawn side by side</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Ragebot</h3>
-      <ul>
-        <li>Multipoint scaled per hitbox</li>
-        <li>Autowall with real penetration damage</li>
-        <li>Hitchance from actual weapon spread</li>
-        <li>Targets ordered by damage, then distance</li>
-        <li>Backtrack across stored ticks</li>
-        <li>Zeus bot, autorevolver, autoscope</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Fakelag</h3>
-      <ul>
-        <li>Triggers on slow walk, move, air and peek</li>
-        <li>Choke amount set per trigger</li>
-        <li>Breaks lag compensation as you come out</li>
-        <li>Automatic peek that pulls you back to cover</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Visuals</h3>
-      <ul>
-        <li>Box, name, health, weapon, ammo</li>
-        <li>Chams for visible, wall, backtrack and fake</li>
-        <li>Skeleton and hitbox overlay</li>
-        <li>Desync arrows so you can see your own side</li>
-        <li>Nightmode, fullbright, no post-processing</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Misc</h3>
-      <ul>
-        <li>Bomb carrier and spectator list</li>
-        <li>Keybind list with live states</li>
-        <li>Hurt indicator, kill effect, trail</li>
-        <li>Configs saved as plain files you can trade</li>
-      </ul>
-    </article>
-    <article class="unit">
-      <h3>Us</h3>
-      <ul>
-        <li>Suggestions from Discord get built, not archived</li>
-        <li>Every fix arrives as a public commit</li>
-        <li>Nothing paywalled, nothing held back for a paid tier</li>
-        <li>Compiles in one command, no dependencies to hunt</li>
-      </ul>
-    </article>
-  </div>
+  <ol class="feed" data-role="feed">
+    <li class="feed-wait">Reading commits&hellip;</li>
+  </ol>
+  <p class="feed-foot">Straight off
+    <a href="https://github.com/ryknuq/Lambda/commits" target="_blank" rel="noopener">master</a>.
+    Ask for something in Discord and this is where it turns up.</p>
 </section>
 <section class="sect sect-split" id="compile">
   <div class="sect-head">
