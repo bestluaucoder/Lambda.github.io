@@ -39,7 +39,8 @@ republishes on its own. The repo has to be public for this to work on a free pla
 - The Discord card reads `discord.com/api/v10/invites/lmbda?with_counts=true` for the server name,
   icon, banner and the member/online counts — the same numbers an invite embed shows. No token, no
   widget to enable. If Discord is unreachable the card falls back to a plain join link.
-- The YouTube card is a deliberate empty state until there is a channel to point at.
+- The YouTube card is a plain link to `@LambdaHvH` — no API call and no embed, so there is nothing
+  to configure. Point it elsewhere by editing the two hrefs in `index.html`.
 - The link preview reads `og:title`, `og:description` and `og:image` from the top of
   `index.html`. Those URLs are absolute on purpose — relative ones do not work in a preview.
   Discord and Twitter cache a preview for a few hours, so use Discord's embed debugger or add

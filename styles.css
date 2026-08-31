@@ -378,10 +378,6 @@ a { color: inherit; text-decoration: none; }
 
 .mcard-dc .mcard-go { color: #aab2ff; }
 
-.mcard-soon { opacity: .55; }
-.mcard-soon:hover { border-color: var(--line); transform: none; }
-.mcard-soon .mcard-go { color: var(--dim); }
-
 .sect-split {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
