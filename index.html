@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lambda — CS:GO internal</title>
+<meta name="description" content="Lambda is an open-source HvH internal for Counter-Strike: Global Offensive. Double tap, anti-aim, resolver and ragebot, published as source.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-glyph">&#955;</span>
+    <span class="brand-word">Lambda</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#compile">Compile</a>
+    <a href="https://github.com/ryknuq/Lambda">GitHub</a>
+    <a class="nav-dc" href="https://discord.gg/lmbda">Discord</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <span class="tagline">Counter-Strike: Global Offensive</span>
+    <h1>Lambda, Your only Resort.</h1>
+    <p class="lede">Instead of making fixes and luas for neverwin and gameshit, you can use our
+      open-source hvh cheat. At least you won't have to worry about the resolver anymore — and by
+      the way, we actually listen to our members' suggestions, unlike others&hellip;</p>
+    <div class="actions">
+      <a class="act act-main" href="https://github.com/ryknuq/Lambda/releases/latest">
+        Latest release <b data-role="tag">&mdash;</b>
+      </a>
+      <a class="act act-dll" href="https://github.com/ryknuq/Lambda/releases/latest" data-role="dll">
+        Download .dll <b data-role="size">checking</b>
+      </a>
+      <a class="act" href="https://github.com/ryknuq/Lambda">
+        Source <b data-role="stars">github</b>
+      </a>
+      <a class="act act-dc" href="https://discord.gg/lmbda">
+        Discord <b>discord.gg/lmbda</b>
+      </a>
+    </div>
+  </div>
+
+  <aside class="card">
+    <div class="card-top">
+      <span>Current build</span>
+      <span class="pill" data-role="state">loading</span>
+    </div>
+    <dl class="card-rows">
+      <div class="kv"><dt>Tag</dt><dd data-role="p-tag">&mdash;</dd></div>
+      <div class="kv"><dt>Published</dt><dd data-role="p-date">&mdash;</dd></div>
+      <div class="kv"><dt>Binary</dt><dd data-role="p-asset">&mdash;</dd></div>
+      <div class="kv"><dt>Size</dt><dd data-role="p-size">&mdash;</dd></div>
+      <div class="kv"><dt>Downloads</dt><dd data-role="p-dl">&mdash;</dd></div>
+      <div class="kv"><dt>Commit</dt><dd data-role="p-sha">&mdash;</dd></div>
+      <div class="kv"><dt>Branch</dt><dd data-role="p-branch">&mdash;</dd></div>
+    </dl>
+    <p class="card-note" data-role="note">Reading GitHub&hellip;</p>
+  </aside>
+</section>
+<section class="sect" id="features">
+  <div class="sect-head">
+    <h2>Inside the build</h2>
+    <p>No locked tiers, no private branch, no paste filler. All of it is in the repo you can read.</p>
+  </div>
+  <div class="grid">
+    <article class="unit">
+      <h3>Tickbase</h3>
+      <ul>
+        <li>Double tap up to a 16 tick shift</li>
+        <li>Hide shots that still land</li>
+        <li>Shift budget checked before every fire</li>
+        <li>Shorter shift while peeking a corner</li>
+        <li>Teleport corrected on release, no rubber band</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Anti-aim</h3>
+      <ul>
+        <li>Real desync, both sides, manual left and right</li>
+        <li>Jitter, spin and static yaw offsets</li>
+        <li>Freestanding read off world geometry</li>
+        <li>Fake duck, slide walk, fast stop</li>
+        <li>Pitch at target and by distance</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Resolver</h3>
+      <ul>
+        <li>Yaw solved from animation layers, not guessed</li>
+        <li>Shot history kept per enemy</li>
+        <li>Corrects itself again after every miss</li>
+        <li>Fake and real angle drawn side by side</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Ragebot</h3>
+      <ul>
+        <li>Multipoint scaled per hitbox</li>
+        <li>Autowall with real penetration damage</li>
+        <li>Hitchance from actual weapon spread</li>
+        <li>Targets ordered by damage, then distance</li>
+        <li>Backtrack across stored ticks</li>
+        <li>Zeus bot, autorevolver, autoscope</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Fakelag</h3>
+      <ul>
+        <li>Triggers on slow walk, move, air and peek</li>
+        <li>Choke amount set per trigger</li>
+        <li>Breaks lag compensation as you come out</li>
+        <li>Automatic peek that pulls you back to cover</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Visuals</h3>
+      <ul>
+        <li>Box, name, health, weapon, ammo</li>
+        <li>Chams for visible, wall, backtrack and fake</li>
+        <li>Skeleton and hitbox overlay</li>
+        <li>Desync arrows so you can see your own side</li>
+        <li>Nightmode, fullbright, no post-processing</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Misc</h3>
+      <ul>
+        <li>Bomb carrier and spectator list</li>
+        <li>Keybind list with live states</li>
+        <li>Hurt indicator, kill effect, trail</li>
+        <li>Configs saved as plain files you can trade</li>
+      </ul>
+    </article>
+    <article class="unit">
+      <h3>Us</h3>
+      <ul>
+        <li>Suggestions from Discord get built, not archived</li>
+        <li>Every fix arrives as a public commit</li>
+        <li>Nothing paywalled, nothing held back for a paid tier</li>
+        <li>Compiles in one command, no dependencies to hunt</li>
+      </ul>
+    </article>
+  </div>
+</section>
+<section class="sect sect-split" id="compile">
+  <div class="sect-head">
+    <h2>Compile it yourself</h2>
+    <p>The release binary is exactly what this produces. Nothing else is added to it.</p>
+  </div>
+  <div class="stack">
+    <pre class="code"><code>git clone https://github.com/ryknuq/Lambda
+cd Lambda
+MSBuild Lambda.vcxproj -p:Configuration=Release -p:Platform=Win32
+
+  Lambda.vcxproj -&gt; release\Lambda.dll</code></pre>
+    <div class="facts">
+      <div class="fact"><span>Toolchain</span><b>Visual Studio 2022, v143</b></div>
+      <div class="fact"><span>Target</span><b>Windows, 32-bit</b></div>
+      <div class="fact"><span>Loader</span><b>Not included, any manual map works</b></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-brand"><span class="brand-glyph">&#955;</span> Lambda</div>
+  <div class="foot-links">
+    <a href="https://github.com/ryknuq/Lambda">Repository</a>
+    <a href="https://github.com/ryknuq/Lambda/releases">Releases</a>
+    <a href="https://discord.gg/lmbda">Discord</a>
+  </div>
+  <p class="foot-note">Not affiliated with Valve.</p>
+</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
