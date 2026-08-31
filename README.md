@@ -7,7 +7,7 @@ dependencies:
 | --- | --- |
 | `index.html` | The whole page, plus the Open Graph tags used for link previews |
 | `styles.css` | All styling |
-| `app.js` | Reads the GitHub API and fills in the build card + the `.dll` button |
+| `app.js` | Reads the GitHub API and fills in the build card + the `.dll` button, and reads the Discord invite for the media card |
 | `assets/icon.png` | Tab icon, 400×400 |
 | `assets/banner.png` | The image Discord, Twitter and iMessage show when the link is posted |
 
@@ -36,6 +36,10 @@ republishes on its own. The repo has to be public for this to work on a free pla
   the limit sees the card say so, and every link on the page still works. Do not add a token to
   raise it — anything in a static site is public.
 - Change which repo it reads by editing `REPO` on line 1 of `app.js`.
+- The Discord card reads `discord.com/api/v10/invites/lmbda?with_counts=true` for the server name,
+  icon, banner and the member/online counts — the same numbers an invite embed shows. No token, no
+  widget to enable. If Discord is unreachable the card falls back to a plain join link.
+- The YouTube card is a deliberate empty state until there is a channel to point at.
 - The link preview reads `og:title`, `og:description` and `og:image` from the top of
   `index.html`. Those URLs are absolute on purpose — relative ones do not work in a preview.
   Discord and Twitter cache a preview for a few hours, so use Discord's embed debugger or add

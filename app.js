@@ -55,6 +55,46 @@ async function repoInfo() {
   }
 }
 
+const cdn = (kind, id, hash, size) =>
+  `https://cdn.discordapp.com/${kind}/${id}/${hash}.${hash.startsWith("a_") ? "gif" : "png"}?size=${size}`;
+
+async function discordInfo() {
+  const pill = pick("dc-pill");
+  try {
+    const res = await fetch("https://discord.com/api/v10/invites/lmbda?with_counts=true", {
+      headers: { Accept: "application/json" }
+    });
+    if (!res.ok) throw new Error(String(res.status));
+    const inv = await res.json();
+    const g = inv.guild || {};
+    if (g.name) put("dc-name", g.name);
+
+    const ico = pick("dc-ico");
+    if (ico && g.icon && g.id) ico.src = cdn("icons", g.id, g.icon, 128);
+
+    const art = pick("dc-art");
+    if (art && g.banner && g.id) {
+      art.style.backgroundImage = `url("${cdn("banners", g.id, g.banner, 600)}")`;
+      art.classList.add("has-art");
+    }
+
+    const members = inv.approximate_member_count;
+    const online = inv.approximate_presence_count;
+    if (pill && Number.isFinite(online)) {
+      pill.classList.add("on");
+      pill.textContent = `${online} online`;
+    }
+    if (Number.isFinite(members)) {
+      put("dc-line", `${members} members, ${Number.isFinite(online) ? online : 0} of them in there right now. Ask for something and it gets built.`);
+    } else {
+      put("dc-line", "Ask for something in here and it gets built.");
+    }
+  } catch {
+    if (pill) pill.textContent = "invite";
+    put("dc-line", "Ask for something in here and it gets built.");
+  }
+}
+
 async function commitInfo() {
   try {
     const list = await get("/commits?per_page=1");
@@ -123,6 +163,30 @@ async function releaseInfo() {
   put("note", `${file.name} from ${tag}, published ${when(rel.published_at)}.`);
 }
 
+function tiktok() {
+  const wrap = pick("tt-wrap");
+  if (!wrap || !wrap.querySelector(".tiktok-embed")) return;
+
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.tiktok.com/embed.js";
+  document.body.append(s);
+
+  let tries = 0;
+  const watch = setInterval(() => {
+    tries += 1;
+    const frame = wrap.querySelector("iframe");
+    if (frame && frame.getBoundingClientRect().height > 140) {
+      wrap.classList.add("is-live");
+      clearInterval(watch);
+    } else if (tries > 48) {
+      clearInterval(watch);
+    }
+  }, 250);
+}
+
 repoInfo();
 commitInfo();
 releaseInfo();
+discordInfo();
+tiktok();
