@@ -265,177 +265,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--dim);
 }
 
-.dsy-wrap {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(272px, 372px);
-  gap: clamp(28px, 5vw, 64px);
-  align-items: center;
-}
-
-.dsy-copy h2 {
-  margin: 0;
-  max-width: 22ch;
-  font-size: clamp(22px, 2.6vw, 30px);
-  font-weight: 600;
-  line-height: 1.16;
-  letter-spacing: -.02em;
-}
-
-.dsy-copy p {
-  margin: 15px 0 0;
-  max-width: 52ch;
-  font-size: 14.5px;
-  color: var(--dim);
-}
-
-.dsy-modes {
-  display: flex;
-  gap: 6px;
-  margin-top: 24px;
-}
-
-.dsy-mode {
-  padding: 6px 12px;
-  border: 1px solid var(--line2);
-  border-radius: 7px;
-  background: var(--up);
-  color: var(--soft);
-  font-family: var(--mono);
-  font-size: 12px;
-  cursor: pointer;
-  transition: border-color .16s, background .16s, color .16s;
-}
-
-.dsy-mode:hover { border-color: #414651; color: var(--txt); }
-
-.dsy-mode.is-on {
-  border-color: #57503c;
-  background: rgba(217, 201, 163, .1);
-  color: var(--sand);
-}
-
-.dsy-read {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  margin: 24px 0 0;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  background: var(--line);
-  overflow: hidden;
-}
-
-.dsy-read > div {
-  padding: 9px 12px;
-  background: var(--bg);
-}
-
-.dsy-read dt {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--dim);
-}
-
-.dsy-read dd {
-  margin: 3px 0 0;
-  font-family: var(--mono);
-  font-size: 14px;
-  color: var(--txt);
-}
-
-.dsy-dial {
-  position: relative;
-  padding: 14px 14px 4px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: linear-gradient(180deg, var(--up2), var(--up));
-  cursor: grab;
-  touch-action: none;
-}
-
-.dsy-dial:active { cursor: grabbing; }
-.dsy-dial svg { display: block; width: 100%; height: auto; }
-
-.dsy-ring { fill: none; stroke: var(--line); }
-.dsy-ring-in { stroke: #1d2025; stroke-dasharray: 2 5; }
-.dsy-tick line { stroke: #363a42; stroke-width: 1.5; }
-.dsy-wedge { fill: rgba(217, 201, 163, .09); }
-
-.dsy-ghost {
-  stroke: #6f747d;
-  stroke-width: 1.6;
-  stroke-dasharray: 5 4;
-  stroke-linecap: round;
-}
-
-.dsy-ghost.is-off { display: none; }
-
-.dsy-live {
-  stroke: var(--sand);
-  stroke-width: 2.4;
-  stroke-linecap: round;
-}
-
-.dsy-dot { fill: var(--sand); }
-
-.dsy-hint {
-  display: block;
-  padding: 4px 0 8px;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--dim);
-}
-.feed {
-  margin: 26px 0 0;
-  padding: 0;
-  list-style: none;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.feed li + li { border-top: 1px solid var(--line); }
-
-.feed a {
-  display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
-  gap: 14px;
-  align-items: baseline;
-  padding: 11px 14px;
-  transition: background .16s;
-}
-
-.feed a:hover { background: var(--up); }
-
-.feed-sha { font-family: var(--mono); font-size: 12px; color: var(--sand); }
-.feed-msg { font-size: 13.5px; color: var(--soft); overflow-wrap: anywhere; }
-
-.feed-when {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  color: var(--dim);
-  white-space: nowrap;
-}
-
-.feed-wait {
-  padding: 11px 14px;
-  font-size: 13px;
-  color: var(--dim);
-}
-
-.feed-foot {
-  margin: 13px 0 0;
-  font-size: 12.5px;
-  color: var(--dim);
-}
-
-.feed-foot a {
-  color: var(--soft);
-  text-decoration: underline;
-  text-decoration-color: #3a3f47;
-}
-
 .sect-split {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
@@ -505,17 +334,12 @@ a { color: inherit; text-decoration: none; }
   .hero { grid-template-columns: 1fr; }
   .card { max-width: 440px; }
   .sect-split { grid-template-columns: 1fr; }
-  .dsy-wrap { grid-template-columns: 1fr; }
-  .dsy-dial { max-width: 372px; }
 }
 
 @media (max-width: 560px) {
   .nav-links { font-size: 13px; gap: 12px; }
   .act { flex: 1 1 100%; justify-content: space-between; }
   .foot-note { margin-left: 0; flex-basis: 100%; }
-  .dsy-read { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .feed a { grid-template-columns: 64px minmax(0, 1fr); }
-  .feed-when { grid-column: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {

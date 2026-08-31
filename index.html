@@ -35,7 +35,6 @@
     <span class="brand-word">Lambda</span>
   </a>
   <nav class="nav-links">
-    <a href="#features">Desync</a>
     <a href="#compile">Compile</a>
     <a href="https://github.com/ryknuq/Lambda" target="_blank" rel="noopener">GitHub</a>
     <a class="nav-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">Discord</a>
@@ -82,59 +81,6 @@
     </dl>
     <p class="card-note" data-role="note">Reading GitHub&hellip;</p>
   </aside>
-</section>
-<section class="sect" id="features">
-  <div class="dsy-wrap">
-    <div class="dsy-copy">
-      <h2>They shoot where you were standing.</h2>
-      <p>Desync splits the yaw the server writes down from the one your bullets actually leave.
-        Drag the dial. The solid line is where you are firing from, the dashed one is what every
-        enemy's aimbot resolves against, and the gap between the two is the whole game — it is
-        also what doubletap, backtrack and the resolver are all built on top of.</p>
-      <div class="dsy-modes" role="group" aria-label="Anti-aim mode">
-        <button class="dsy-mode is-on" type="button" data-mode="desync">desync</button>
-        <button class="dsy-mode" type="button" data-mode="jitter">jitter</button>
-        <button class="dsy-mode" type="button" data-mode="spin">spin</button>
-      </div>
-      <dl class="dsy-read">
-        <div><dt>real</dt><dd data-role="d-real">0&deg;</dd></div>
-        <div><dt>fake</dt><dd data-role="d-fake">-58&deg;</dd></div>
-        <div><dt>gap</dt><dd data-role="d-gap">58&deg;</dd></div>
-        <div><dt>side</dt><dd data-role="d-side">left</dd></div>
-      </dl>
-    </div>
-    <div class="dsy-dial" data-role="dial" tabindex="0" role="slider" aria-label="Your yaw"
-      aria-valuemin="-180" aria-valuemax="180" aria-valuenow="0">
-      <svg viewBox="0 0 300 300" aria-hidden="true">
-        <circle class="dsy-ring" cx="150" cy="150" r="112"/>
-        <circle class="dsy-ring dsy-ring-in" cx="150" cy="150" r="74"/>
-        <g class="dsy-tick">
-          <line x1="150" y1="28" x2="150" y2="41"/>
-          <line x1="272" y1="150" x2="259" y2="150"/>
-          <line x1="150" y1="272" x2="150" y2="259"/>
-          <line x1="28" y1="150" x2="41" y2="150"/>
-        </g>
-        <path class="dsy-wedge" data-role="d-wedge" d=""/>
-        <line class="dsy-ghost" data-role="d-ghost2" x1="150" y1="150" x2="150" y2="54"/>
-        <line class="dsy-ghost" data-role="d-ghost" x1="150" y1="150" x2="150" y2="54"/>
-        <line class="dsy-live" data-role="d-live" x1="150" y1="150" x2="150" y2="54"/>
-        <circle class="dsy-dot" cx="150" cy="150" r="4.5"/>
-      </svg>
-      <span class="dsy-hint">drag it, or use the arrow keys</span>
-    </div>
-  </div>
-</section>
-
-<section class="sect" id="log">
-  <div class="sect-head">
-    <h2>Pushed lately</h2>
-  </div>
-  <ol class="feed" data-role="feed">
-    <li class="feed-wait">Reading commits&hellip;</li>
-  </ol>
-  <p class="feed-foot">Straight off
-    <a href="https://github.com/ryknuq/Lambda/commits" target="_blank" rel="noopener">master</a>.
-    Ask for something in Discord and this is where it turns up.</p>
 </section>
 <section class="sect sect-split" id="compile">
   <div class="sect-head">
