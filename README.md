@@ -1,14 +1,15 @@
 # Lambda site
 
 Static site for [ryknuq/Lambda](https://github.com/ryknuq/Lambda). No build step, no
-dependencies. Four files:
+dependencies:
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The whole page |
+| `index.html` | The whole page, plus the Open Graph tags used for link previews |
 | `styles.css` | All styling |
 | `app.js` | Reads the GitHub API and fills in the build card + the `.dll` button |
-| `favicon.svg` | Tab icon |
+| `assets/icon.png` | Tab icon, 400×400 |
+| `assets/banner.png` | The image Discord, Twitter and iMessage show when the link is posted |
 
 ## Publishing
 
@@ -35,5 +36,8 @@ republishes on its own. The repo has to be public for this to work on a free pla
   the limit sees the card say so, and every link on the page still works. Do not add a token to
   raise it — anything in a static site is public.
 - Change which repo it reads by editing `REPO` on line 1 of `app.js`.
-- To use your own λ icon instead of `favicon.svg`, drop the PNG in beside `index.html` and point
-  the `<link rel="icon">` in `index.html` at it.
+- The link preview reads `og:title`, `og:description` and `og:image` from the top of
+  `index.html`. Those URLs are absolute on purpose — relative ones do not work in a preview.
+  Discord and Twitter cache a preview for a few hours, so use Discord's embed debugger or add
+  `?1` to the link to force a re-fetch after changing them.
+- The stripe colour down the left of the Discord embed comes from `theme-color`.
