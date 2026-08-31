@@ -12,21 +12,18 @@ dependencies. Four files:
 
 ## Publishing
 
-This repo is `bestluaucoder/Lambda.github.io`, so GitHub treats it as a project site and it
-serves from a subpath:
+Lives at:
 
 ```
-https://bestluaucoder.github.io/Lambda.github.io/
+https://lambdahvh.github.io
 ```
 
-That works — every path in the page is relative. If you want the clean root URL
-`https://bestluaucoder.github.io` instead, the repo has to be named exactly
-`bestluaucoder.github.io`; the name must match the account, and `Lambda.github.io` does not.
-Renaming this repo in Settings is enough, no re-push needed.
+That is the root of the domain because the repo name matches the account that owns it
+(`lambdahvh/lambdahvh.github.io`). Any other repo name would serve from a subpath instead.
 
 Turn it on: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
 Branch: `main` / `/ (root)` → Save**. First deploy takes about a minute; after that every push
-republishes on its own.
+republishes on its own. The repo has to be public for this to work on a free plan.
 
 ## Things worth knowing
 
