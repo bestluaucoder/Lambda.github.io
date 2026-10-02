@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lambda — Open Source HvH</title>
+<meta name="description" content="Free open-source CS:GO HvH cheat. Better resolver than what you're paying for. We ship what our community asks for.">
+<link rel="canonical" href="https://bestluaucoder.github.io/Lambda.github.io/">
+<meta name="theme-color" content="#d9c9a3">
+<meta property="og:site_name" content="Lambda">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bestluaucoder.github.io/Lambda.github.io/">
+<meta property="og:title" content="Lambda — Open Source HvH">
+<meta property="og:description" content="Free open-source CS:GO HvH cheat. Better resolver than what you're paying for.">
+<meta property="og:image" content="assets/banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lambda — Open Source HvH">
+<meta name="twitter:description" content="Free open-source CS:GO HvH cheat. Better resolver than what you're paying for.">
+<meta name="twitter:image" content="assets/banner.png">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-glyph">&#955;</span>
+    <span class="brand-word">Lambda</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#media">Media</a>
+    <a href="#lua">Lua API</a>
+    <a href="#compile">Compile</a>
+    <a href="https://github.com/bestluaucoder/Lambda" target="_blank" rel="noopener">GitHub</a>
+    <a class="nav-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">Discord</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <span class="tagline">Counter-Strike: Global Offensive · Open Source</span>
+    <h1>Lambda.<br>Free. Open. Built right.</h1>
+    <p class="lede">Stop paying for paste cheats or writing luas to fix neverlose. Lambda is open source, the resolver actually works, and if something's broken you can just fix it yourself or ask and we'll ship it.</p>
+    <div class="actions">
+      <a class="act act-main" href="https://github.com/bestluaucoder/Lambda/releases/latest" target="_blank" rel="noopener">
+        Latest release <b data-role="tag">&mdash;</b>
+      </a>
+      <a class="act act-dll" href="https://github.com/bestluaucoder/Lambda/releases/latest" data-role="dll" target="_blank" rel="noopener">
+        Download .dll <b data-role="size">checking</b>
+      </a>
+      <a class="act" href="https://github.com/bestluaucoder/Lambda" target="_blank" rel="noopener">
+        Source <b data-role="stars">github</b>
+      </a>
+      <a class="act act-lua" href="#lua">
+        Lua API <b>docs</b>
+      </a>
+      <a class="act act-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">
+        Discord <b>discord.gg/lmbda</b>
+      </a>
+    </div>
+  </div>
+
+  <aside class="card">
+    <div class="card-top">
+      <span>Current build</span>
+      <span class="pill" data-role="state">loading</span>
+    </div>
+    <dl class="card-rows">
+      <div class="kv"><dt>Tag</dt><dd data-role="p-tag">&mdash;</dd></div>
+      <div class="kv"><dt>Published</dt><dd data-role="p-date">&mdash;</dd></div>
+      <div class="kv"><dt>Binary</dt><dd data-role="p-asset">&mdash;</dd></div>
+      <div class="kv"><dt>Size</dt><dd data-role="p-size">&mdash;</dd></div>
+      <div class="kv"><dt>Downloads</dt><dd data-role="p-dl">&mdash;</dd></div>
+      <div class="kv"><dt>Commit</dt><dd data-role="p-sha">&mdash;</dd></div>
+      <div class="kv"><dt>Branch</dt><dd data-role="p-branch">&mdash;</dd></div>
+    </dl>
+    <p class="card-note" data-role="note">Reading GitHub&hellip;</p>
+  </aside>
+</section>
+
+<section class="sect" id="media">
+  <div class="sect-head">
+    <h2>Where it lives</h2>
+    <p>Discord is where features get requested and shipped. Clips on TikTok, longer footage on YouTube.</p>
+  </div>
+  <div class="media">
+    <a class="mcard mcard-dc" href="https://discord.gg/lmbda" target="_blank" rel="noopener">
+      <span class="mcard-art" data-role="dc-art"><span class="mcard-glyph">&#955;</span></span>
+      <span class="mcard-top">
+        <img class="mcard-ico" data-role="dc-ico" src="assets/icon.png" alt="" width="34" height="34">
+        <span class="mcard-id">
+          <b data-role="dc-name">Discord</b>
+          <span class="mcard-sub">discord.gg/lmbda</span>
+        </span>
+        <span class="pill" data-role="dc-pill">loading</span>
+      </span>
+      <span class="mcard-line" data-role="dc-line">Reading the invite&hellip;</span>
+      <span class="mcard-go">Join the server &rarr;</span>
+    </a>
+
+    <div class="mcard mcard-tt">
+      <div class="tt-wrap" data-role="tt-wrap">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@n1kvz" data-unique-id="n1kvz"
+          data-embed-type="creator" style="max-width:780px;min-width:288px">
+          <section></section>
+        </blockquote>
+        <span class="tt-wait">@n1kvz</span>
+      </div>
+      <span class="mcard-top">
+        <span class="mcard-id">
+          <b>TikTok</b>
+          <span class="mcard-sub">tiktok.com/@n1kvz</span>
+        </span>
+        <span class="pill">clips</span>
+      </span>
+      <span class="mcard-line">HvH clips and Lambda progress from @n1kvz.</span>
+      <a class="mcard-go" href="https://www.tiktok.com/@n1kvz" target="_blank" rel="noopener">Open the profile &rarr;</a>
+    </div>
+
+    <a class="mcard" href="https://www.youtube.com/@LambdaHvH" target="_blank" rel="noopener">
+      <span class="mcard-art"><span class="mcard-art-txt">@LambdaHvH</span></span>
+      <span class="mcard-top">
+        <span class="mcard-id">
+          <b>YouTube</b>
+          <span class="mcard-sub">youtube.com/@LambdaHvH</span>
+        </span>
+        <span class="pill">channel</span>
+      </span>
+      <span class="mcard-line">Longer footage that doesn't fit in a clip.</span>
+      <span class="mcard-go">Open the channel &rarr;</span>
+    </a>
+  </div>
+</section>
+
+<section class="sect" id="lua">
+  <div class="sect-head">
+    <h2>Lua API</h2>
+    <p>Put scripts in <code class="inline-code">Documents\Lambda\Luas\</code>. Lambda uses LuaJIT — standard Lua 5.1 syntax with FFI available. Load them from the Scripts tab inside the menu.</p>
+  </div>
+
+  <div class="lua-grid">
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">client</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>client.add_callback(event, fn)</code><span>Register a callback. Events: <em>render</em>, <em>paint</em>, <em>create_move</em>, <em>frame_stage</em>, <em>net_update</em>, <em>aim_shot</em>, <em>aim_ack</em>, <em>pre_animupdate</em>, <em>post_animupdate</em>, <em>recv_voice_data</em>.</span></div>
+        <div class="lua-fn"><code>client.unload_script()</code><span>Unload the currently running script.</span></div>
+        <div class="lua-fn"><code>client.reload_script()</code><span>Reload the currently running script.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">entity</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>entity.get(index) &rarr; entity_t</code><span>Get entity by index.</span></div>
+        <div class="lua-fn"><code>entity.get_local_player() &rarr; player_t</code><span>Get the local player.</span></div>
+        <div class="lua-fn"><code>entity.get_player_resource() &rarr; player_resource_t</code><span>Get <code>CCSPlayerResource</code>.</span></div>
+        <div class="lua-fn"><code>entity.from_handle(handle) &rarr; entity_t</code><span>Resolve an entity handle.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">ui</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>ui.tab(name, icon?) &rarr; tab</code><span>Create a new menu tab.</span></div>
+        <div class="lua-fn"><code>ui.groupbox(tab, name, col?, size?) &rarr; groupbox_t</code><span>Add a groupbox to a tab.</span></div>
+        <div class="lua-fn"><code>ui.find(tab, group, name, type?) &rarr; ui_element_t</code><span>Find an existing widget.</span></div>
+        <div class="lua-fn"><code>ui.is_open() &rarr; bool</code><span>Whether the menu is open.</span></div>
+        <div class="lua-fn"><code>ui.get_binds() &rarr; {ui_element_t}</code><span>Returns all registered keybinds.</span></div>
+        <div class="lua-fn"><code>groupbox_t:checkbox(name, default?) &rarr; ui_element_t</code><span>Add a checkbox.</span></div>
+        <div class="lua-fn"><code>groupbox_t:slider_int(name, min, max, default?, fmt?) &rarr; ui_element_t</code><span>Add an integer slider.</span></div>
+        <div class="lua-fn"><code>groupbox_t:slider_float(name, min, max, default?, fmt?) &rarr; ui_element_t</code><span>Add a float slider.</span></div>
+        <div class="lua-fn"><code>groupbox_t:combo(name, items) &rarr; ui_element_t</code><span>Add a dropdown.</span></div>
+        <div class="lua-fn"><code>groupbox_t:multi_combo(name, items) &rarr; ui_element_t</code><span>Add a multi-select dropdown.</span></div>
+        <div class="lua-fn"><code>groupbox_t:color_picker(name, default?) &rarr; ui_element_t</code><span>Add a color picker.</span></div>
+        <div class="lua-fn"><code>groupbox_t:keybind(name) &rarr; ui_element_t</code><span>Add a keybind.</span></div>
+        <div class="lua-fn"><code>groupbox_t:button(name) &rarr; ui_element_t</code><span>Add a button.</span></div>
+        <div class="lua-fn"><code>groupbox_t:input(name) &rarr; ui_element_t</code><span>Add a text input.</span></div>
+        <div class="lua-fn"><code>ui_element_t:get() &rarr; any</code><span>Get the current value.</span></div>
+        <div class="lua-fn"><code>ui_element_t:set(value)</code><span>Set the value.</span></div>
+        <div class="lua-fn"><code>ui_element_t:set_callback(fn)</code><span>Fire <code>fn</code> when the value changes.</span></div>
+        <div class="lua-fn"><code>ui_element_t.visible = bool</code><span>Show or hide the element.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">render</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>render.screen_size() &rarr; x, y</code><span>Screen width and height in pixels.</span></div>
+        <div class="lua-fn"><code>render.world_to_screen(vec) &rarr; x, y, visible</code><span>Project a world position to screen coords.</span></div>
+        <div class="lua-fn"><code>render.text(font, x, y, color, text, centered?)</code><span>Draw text.</span></div>
+        <div class="lua-fn"><code>render.measure_text(font, text) &rarr; w, h</code><span>Measure text dimensions.</span></div>
+        <div class="lua-fn"><code>render.rect(x, y, w, h, color, rounding?)</code><span>Filled rectangle.</span></div>
+        <div class="lua-fn"><code>render.rect_outline(x, y, w, h, color, thickness?, rounding?)</code><span>Outlined rectangle.</span></div>
+        <div class="lua-fn"><code>render.line(x1, y1, x2, y2, color, thickness?)</code><span>Draw a line.</span></div>
+        <div class="lua-fn"><code>render.circle(x, y, r, color, segments?)</code><span>Filled circle.</span></div>
+        <div class="lua-fn"><code>render.circle_outline(x, y, r, color, thickness?, segments?)</code><span>Outlined circle.</span></div>
+        <div class="lua-fn"><code>render.gradient(x, y, w, h, c1, c2, c3, c4)</code><span>Four-corner gradient rectangle.</span></div>
+        <div class="lua-fn"><code>render.texture(img, x, y, w, h, color?)</code><span>Draw a loaded image.</span></div>
+        <div class="lua-fn"><code>render.load_image(path) &rarr; image_t</code><span>Load an image from the Luas folder.</span></div>
+        <div class="lua-fn"><code>render.add_font(name, size, flags?) &rarr; font</code><span>Create a font handle.</span></div>
+        <div class="lua-fn"><code>render.camera_angles() &rarr; qangle</code><span>Current camera angles.</span></div>
+        <div class="lua-fn"><code>render.camera_position() &rarr; vector</code><span>Current camera world position.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">utils</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>utils.trace_line(start, end, skip?) &rarr; trace_t</code><span>World trace between two points.</span></div>
+        <div class="lua-fn"><code>utils.trace_bullet(attacker, start, end) &rarr; fire_bullet_t</code><span>Simulate a bullet trace with damage.</span></div>
+        <div class="lua-fn"><code>utils.is_key_pressed(key) &rarr; bool</code><span>Check if a key is held (VK code).</span></div>
+        <div class="lua-fn"><code>utils.get_mouse_position() &rarr; x, y</code><span>Cursor position in screen space.</span></div>
+        <div class="lua-fn"><code>utils.console_exec(cmd)</code><span>Execute a console command.</span></div>
+        <div class="lua-fn"><code>utils.random_int(min, max) &rarr; int</code><span>Random integer in range.</span></div>
+        <div class="lua-fn"><code>utils.random_float(min, max) &rarr; float</code><span>Random float in range.</span></div>
+        <div class="lua-fn"><code>utils.set_clantag(tag)</code><span>Set the local player's clan tag.</span></div>
+        <div class="lua-fn"><code>utils.get_net_channel() &rarr; net_channel_info_t</code><span>Get the current net channel.</span></div>
+        <div class="lua-fn"><code>utils.pattern_scan(module, pattern) &rarr; int</code><span>Scan a module for a byte pattern.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">rage</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>rage.get_antiaim_target() &rarr; player_t</code><span>The player the AA is currently targeting.</span></div>
+        <div class="lua-fn"><code>rage.get_exploit_charge() &rarr; int</code><span>Current tickbase charge amount.</span></div>
+        <div class="lua-fn"><code>rage.is_defensive_active() &rarr; bool</code><span>Whether defensive DT is currently active.</span></div>
+        <div class="lua-fn"><code>rage.force_teleport()</code><span>Force a DT teleport next tick.</span></div>
+        <div class="lua-fn"><code>rage.force_charge()</code><span>Force the tickbase to charge immediately.</span></div>
+        <div class="lua-fn"><code>rage.is_shifting() &rarr; bool</code><span>Whether the tickbase is currently shifting.</span></div>
+        <div class="lua-fn"><code>rage.get_antiaim_yaw() &rarr; float</code><span>The real AA yaw being sent this tick.</span></div>
+        <div class="lua-fn"><code>rage.is_peeking() &rarr; bool</code><span>Whether the local player is currently peeking.</span></div>
+        <div class="lua-fn"><code>rage.override_doubletap_speed(n)</code><span>Override the DT charge speed (ticks).</span></div>
+        <div class="lua-fn"><code>rage.override_tickbase_shift(n)</code><span>Override the tickbase shift amount.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">globals</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>globals.curtime</code><span>Server time in seconds (read-only).</span></div>
+        <div class="lua-fn"><code>globals.realtime</code><span>Client real time (read-only).</span></div>
+        <div class="lua-fn"><code>globals.frametime</code><span>Time since last frame (read-only).</span></div>
+        <div class="lua-fn"><code>globals.tickcount</code><span>Current server tick (read-only).</span></div>
+        <div class="lua-fn"><code>globals.tickinterval</code><span>Seconds per tick, e.g. <code>0.015625</code> (read-only).</span></div>
+        <div class="lua-fn"><code>globals.is_in_game</code><span>Whether the client is in a game.</span></div>
+        <div class="lua-fn"><code>globals.choked_commands</code><span>Number of currently choked commands.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">common</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>common.get_map_name() &rarr; string</code><span>Full map name, e.g. <code>de_dust2</code>.</span></div>
+        <div class="lua-fn"><code>common.get_map_shortname() &rarr; string</code><span>Short version, e.g. <code>dust2</code>.</span></div>
+        <div class="lua-fn"><code>common.get_local_time() &rarr; systime_t</code><span>Current local system time.</span></div>
+        <div class="lua-fn"><code>common.get_unix_time() &rarr; int</code><span>Unix timestamp in seconds.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">files</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>files.read(path) &rarr; string</code><span>Read file contents. Path is relative to the Luas folder.</span></div>
+        <div class="lua-fn"><code>files.write(path, data)</code><span>Write a string to a file.</span></div>
+        <div class="lua-fn"><code>files.exists(path) &rarr; bool</code><span>Check if a file or folder exists.</span></div>
+        <div class="lua-fn"><code>files.create_folder(path)</code><span>Create a directory.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">json</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>json.stringify(table) &rarr; string</code><span>Encode a Lua table to JSON.</span></div>
+        <div class="lua-fn"><code>json.parse(str) &rarr; table</code><span>Decode a JSON string to a Lua table.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">network</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>network.get(url) &rarr; string</code><span>HTTP GET. Returns the response body as a string.</span></div>
+      </div>
+    </div>
+
+    <div class="lua-ns">
+      <div class="lua-ns-head"><span class="lua-ns-name">materials</span></div>
+      <div class="lua-ns-body">
+        <div class="lua-fn"><code>materials.create(name, kv) &rarr; material_t</code><span>Create a material from a VMT keyvalue string.</span></div>
+        <div class="lua-fn"><code>materials.find(name) &rarr; material_t</code><span>Find an existing material by name.</span></div>
+        <div class="lua-fn"><code>materials.draw_chams(player, mat, color, visible_only?)</code><span>Apply chams to a player this frame.</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="lua-example">
+    <div class="lua-ex-head">Example — ESP label on every enemy</div>
+    <pre class="code"><code>local font = render.add_font("Tahoma", 13)
+
+client.add_callback("render", function()
+  for i = 1, globals.max_players do
+    local pl = entity.get(i)
+    if not pl then goto continue end
+    if not pl:is_alive() or not pl:is_enemy() then goto continue end
+
+    local sx, sy, vis = render.world_to_screen(pl:get_eye_position())
+    if vis then
+      render.text(font, sx, sy - 14, color(255, 75, 75), pl:get_name(), true)
+    end
+
+    ::continue::
+  end
+end)</code></pre>
+  </div>
+</section>
+
+<section class="sect sect-split" id="compile">
+  <div class="sect-head">
+    <h2>Compile it yourself</h2>
+    <p>The release binary is built from this exact source. Nothing is added or removed.</p>
+  </div>
+  <div class="stack">
+    <pre class="code"><code>git clone https://github.com/bestluaucoder/Lambda
+cd Lambda\Lambda-master
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe" ^
+  Lambda.sln /p:Configuration=Release /p:Platform=x86 /m
+
+  Lambda.vcxproj -> Release\Lambda.dll</code></pre>
+    <div class="facts">
+      <div class="fact"><span>Toolchain</span><b>Visual Studio 2022 Build Tools, v143</b></div>
+      <div class="fact"><span>Target</span><b>Windows, 32-bit (x86)</b></div>
+      <div class="fact"><span>DirectX SDK</span><b>June 2010 — required for release build</b></div>
+      <div class="fact"><span>Loader</span><b>Not included — any manual map injector works</b></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-brand"><span class="brand-glyph">&#955;</span> Lambda</div>
+  <div class="foot-links">
+    <a href="https://github.com/bestluaucoder/Lambda" target="_blank" rel="noopener">Repository</a>
+    <a href="https://github.com/bestluaucoder/Lambda/releases" target="_blank" rel="noopener">Releases</a>
+    <a href="#lua">Lua API</a>
+    <a href="https://www.youtube.com/@LambdaHvH" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://discord.gg/lmbda" target="_blank" rel="noopener">Discord</a>
+  </div>
+  <p class="foot-note">Not affiliated with Valve.</p>
+</footer>
+</main>
+<script src="app.js?v=5"></script>
+</body>
+</html>
